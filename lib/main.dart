@@ -15,16 +15,24 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.lightBlueAccent[200],
         appBar: AppBar(
           actions: [
-            IconButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (BuildContext context) => Info(),
+            Builder(
+              builder: (context) {
+                return IconButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) => Info(),
+                      ),
+                    );
+                  },
+                  icon: Icon(
+                    Icons.info,
+                    color: Colors.black,
+                    size: 30,
                   ),
                 );
               },
-              icon: Icon(Icons.info, color: Colors.black, size: 30),
             ),
           ],
           centerTitle: true,
@@ -49,6 +57,20 @@ class Info extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text(
+            "Info Page",
+            style: TextStyle(
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
+              fontStyle: FontStyle.italic,
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
