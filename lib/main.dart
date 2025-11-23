@@ -60,13 +60,29 @@ class Info extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Colors.lightBlue[50],
         appBar: AppBar(
+          centerTitle: true,
+          backgroundColor: Colors.transparent,
           title: const Text(
             "Info Page",
             style: TextStyle(
               fontSize: 25,
               fontWeight: FontWeight.bold,
               fontStyle: FontStyle.italic,
+            ),
+          ),
+        ),
+        body: Center(
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              color: Colors.amber,
+            ),
+            child: const Text(
+              textAlign: TextAlign.center,
+              "Greetings and welcome to the Water Counter program",
+              style: TextStyle(fontSize: 25),
             ),
           ),
         ),
