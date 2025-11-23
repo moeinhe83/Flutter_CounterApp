@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
             ),
           ],
           centerTitle: true,
-          backgroundColor: Colors.transparent,
+          backgroundColor: Colors.white,
           title: const Text(
             "Water Counter",
             style: TextStyle(
@@ -63,7 +63,21 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Center(
+      child: Column(
+        children: <Widget>[
+          SizedBox(height: 20),
+          Text(
+            "Drink Water",
+            style: TextStyle(
+              color: Colors.yellow,
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
 
