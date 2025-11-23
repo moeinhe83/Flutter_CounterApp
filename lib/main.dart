@@ -52,6 +52,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
+// ==================== /* Info */ ====================
 class Info extends StatelessWidget {
   const Info({super.key});
 
