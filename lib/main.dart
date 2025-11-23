@@ -16,7 +16,14 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           actions: [
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (BuildContext context) => Info(),
+                  ),
+                );
+              },
               icon: Icon(Icons.info, color: Colors.black, size: 30),
             ),
           ],
