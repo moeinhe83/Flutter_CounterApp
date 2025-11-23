@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
           actions: [
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.list, color: Colors.black, size: 30),
+              icon: Icon(Icons.info, color: Colors.black, size: 30),
             ),
           ],
           centerTitle: true,
