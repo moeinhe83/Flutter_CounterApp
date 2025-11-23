@@ -87,12 +87,12 @@ class Info extends StatelessWidget {
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
-              color: Colors.amber,
+              color: Colors.black,
             ),
             child: const Text(
               textAlign: TextAlign.center,
-              "Greetings and welcome to the Water Counter program",
-              style: TextStyle(fontSize: 25),
+              "Greetings and welcome to \n the Water Counter \n program 😊",
+              style: TextStyle(fontSize: 25, color: Colors.white),
             ),
           ),
         ),
