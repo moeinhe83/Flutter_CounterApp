@@ -13,6 +13,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
+          actions: [
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.list, color: Colors.black, size: 30),
+            ),
+          ],
           centerTitle: true,
           backgroundColor: Colors.blueAccent,
           title: const Text(
