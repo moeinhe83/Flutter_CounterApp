@@ -36,3 +36,12 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+class Info extends StatelessWidget {
+  const Info({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
+  }
+}
