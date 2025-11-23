@@ -62,6 +62,16 @@ class Info extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.lightBlue[50],
         appBar: AppBar(
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.backspace,
+              size: 25,
+              color: Colors.black,
+            ),
+          ),
           centerTitle: true,
           backgroundColor: Colors.transparent,
           title: const Text(
