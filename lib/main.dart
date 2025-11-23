@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Colors.lightBlueAccent[200],
         appBar: AppBar(
           actions: [
             IconButton(
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
             ),
           ],
           centerTitle: true,
-          backgroundColor: Colors.blueAccent,
+          backgroundColor: Colors.transparent,
           title: const Text(
             "Water Counter",
             style: TextStyle(
