@@ -67,12 +67,24 @@ class _HomePageState extends State<HomePage> {
       child: Column(
         children: <Widget>[
           SizedBox(height: 20),
-          Text(
-            "Drink Water",
-            style: TextStyle(
-              color: Colors.yellow,
-              fontSize: 30,
-              fontWeight: FontWeight.bold,
+          Container(
+            height: 50,
+            width: 300,
+            decoration: BoxDecoration(
+              color: Colors.amber,
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Center(
+              child: Text(
+                "💧 Drink Water! 💧",
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  decoration: TextDecoration.underline,
+                  decorationThickness: 1,
+                  decorationColor: Colors.red,
+                ),
+              ),
             ),
           ),
         ],
