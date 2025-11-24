@@ -108,8 +108,18 @@ class _HomePageState extends State<HomePage> {
           ),
           SizedBox(height: 70),
           TextButton(
-            onPressed: () {},
-            child: Icon(Icons.add, size: 40, color: Colors.black),
+            style: ButtonStyle(
+              backgroundColor: WidgetStateProperty.all(Colors.amber),
+            ),
+            onPressed: () {
+              setState(() {
+                record += 1;
+              });
+            },
+            child: Text(
+              "Add Record",
+              style: TextStyle(color: Colors.black, fontSize: 30),
+            ),
           ),
         ],
       ),
