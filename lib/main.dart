@@ -63,7 +63,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  double record = 0.0;
+  int record = 0;
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -100,8 +100,16 @@ class _HomePageState extends State<HomePage> {
                 width: 150,
               ),
               SizedBox(width: 50),
-              Text("Record = 0", style: TextStyle(fontSize: 30)),
+              Text(
+                "Record = $record",
+                style: TextStyle(fontSize: 30),
+              ),
             ],
+          ),
+          SizedBox(height: 70),
+          TextButton(
+            onPressed: () {},
+            child: Icon(Icons.add, size: 40, color: Colors.black),
           ),
         ],
       ),
