@@ -4,7 +4,7 @@ void main(List<String> args) {
   runApp(MyApp());
 }
 
-// StatelessWidget MyApp
+// ==================== /* MyApp */ ====================
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
