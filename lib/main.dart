@@ -150,6 +150,15 @@ class _HomePageState extends State<HomePage> {
                   borderRadius: BorderRadius.circular(20),
                 ),
               ),
+              SizedBox(width: 20),
+              Container(
+                height: 30,
+                width: 210,
+                decoration: BoxDecoration(
+                  color: Colors.amber,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+              ),
             ],
           ),
           SizedBox(height: 20),
@@ -164,6 +173,15 @@ class _HomePageState extends State<HomePage> {
                   borderRadius: BorderRadius.circular(20),
                 ),
               ),
+              SizedBox(width: 20),
+              Container(
+                height: 30,
+                width: 100,
+                decoration: BoxDecoration(
+                  color: Colors.amber,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+              ),
             ],
           ),
           SizedBox(height: 20),
@@ -173,6 +191,15 @@ class _HomePageState extends State<HomePage> {
               Container(
                 height: 30,
                 width: 150,
+                decoration: BoxDecoration(
+                  color: Colors.amber,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+              ),
+              SizedBox(width: 20),
+              Container(
+                height: 30,
+                width: 210,
                 decoration: BoxDecoration(
                   color: Colors.amber,
                   borderRadius: BorderRadius.circular(20),
