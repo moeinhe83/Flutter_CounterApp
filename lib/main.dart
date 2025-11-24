@@ -91,20 +91,37 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           SizedBox(height: 100),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Image.asset(
-                "assets/image/water.jpg",
-                height: 150,
-                width: 150,
-              ),
-              SizedBox(width: 50),
-              Text(
-                "Record = $record",
-                style: TextStyle(fontSize: 30),
-              ),
-            ],
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Image.asset(
+                  "assets/image/water.jpg",
+                  height: 150,
+                  width: 150,
+                ),
+                SizedBox(width: 10),
+                // ignore: avoid_unnecessary_containers
+                Container(
+                  height: 50,
+                  width: 200,
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Record = $record",
+                      style: TextStyle(
+                        fontSize: 30,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
           SizedBox(height: 70),
           TextButton(
