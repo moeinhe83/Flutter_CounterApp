@@ -159,18 +159,44 @@ class Info extends StatelessWidget {
             ),
           ),
         ),
-        body: Center(
-          child: Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              color: Colors.black,
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Center(
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.black,
+                ),
+                child: const Text(
+                  textAlign: TextAlign.center,
+                  "Greetings and welcome to \n the Water Counter \n program 😊",
+                  style: TextStyle(fontSize: 25, color: Colors.white),
+                ),
+              ),
             ),
-            child: const Text(
-              textAlign: TextAlign.center,
-              "Greetings and welcome to \n the Water Counter \n program 😊",
-              style: TextStyle(fontSize: 25, color: Colors.white),
+            SizedBox(height: 50),
+            Center(
+              // ignore: avoid_unnecessary_containers
+              child: Container(
+                height: 100,
+                width: 250,
+                decoration: BoxDecoration(
+                  color: Colors.blueAccent[200],
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Center(
+                  child: Text(
+                    "moeinit.com",
+                    style: TextStyle(
+                      fontSize: 30,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+              ),
             ),
-          ),
+          ],
         ),
       ),
     );
