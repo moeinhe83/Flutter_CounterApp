@@ -89,6 +89,17 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
+          SizedBox(height: 20),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Image.asset(
+                "assets/image/water.jpg",
+                height: 200,
+                width: 200,
+              ),
+            ],
+          ),
         ],
       ),
     );
