@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
             Builder(
               builder: (context) {
                 return IconButton(
+                  tooltip: "Information",
                   onPressed: () {
                     Navigator.push(
                       context,
@@ -254,10 +255,16 @@ class Info extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                   color: Colors.black,
                 ),
-                child: const Text(
-                  textAlign: TextAlign.center,
-                  "Greetings and welcome to \n the Water Counter \n program 😊",
-                  style: TextStyle(fontSize: 25, color: Colors.white),
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: const Text(
+                    textAlign: TextAlign.center,
+                    "Greetings and welcome to \n the Water Counter \n program 😊",
+                    style: TextStyle(
+                      fontSize: 25,
+                      color: Colors.white,
+                    ),
+                  ),
                 ),
               ),
             ),
