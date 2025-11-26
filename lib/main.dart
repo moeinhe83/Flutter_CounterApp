@@ -144,11 +144,12 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-          SizedBox(height: 70),
+          SizedBox(height: 40),
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: Row(
               children: [
+                SizedBox(width: 60),
                 TextButton(
                   style: ButtonStyle(
                     backgroundColor: WidgetStateProperty.all(
@@ -161,7 +162,7 @@ class _HomePageState extends State<HomePage> {
                     });
                   },
                   child: Text(
-                    "Add Record",
+                    "Add",
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 30,
