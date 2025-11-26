@@ -353,6 +353,22 @@ class DateRecord extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          backgroundColor: Colors.lightBlue[200],
+          title: const Text(
+            "Show Records",
+            style: TextStyle(
+              fontSize: 25,
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
