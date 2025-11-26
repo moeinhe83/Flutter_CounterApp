@@ -125,18 +125,46 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           SizedBox(height: 70),
-          TextButton(
-            style: ButtonStyle(
-              backgroundColor: WidgetStateProperty.all(Colors.amber),
-            ),
-            onPressed: () {
-              setState(() {
-                record += 1;
-              });
-            },
-            child: Text(
-              "Add Record",
-              style: TextStyle(color: Colors.black, fontSize: 30),
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Row(
+              children: [
+                TextButton(
+                  style: ButtonStyle(
+                    backgroundColor: WidgetStateProperty.all(
+                      Colors.amber,
+                    ),
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      record += 1;
+                    });
+                  },
+                  child: Text(
+                    "Add Record",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 30,
+                    ),
+                  ),
+                ),
+                SizedBox(width: 50),
+                TextButton(
+                  style: ButtonStyle(
+                    backgroundColor: WidgetStateProperty.all(
+                      Colors.amber,
+                    ),
+                  ),
+                  onPressed: () {},
+                  child: Text(
+                    "Save",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 30,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
           SizedBox(height: 20),
