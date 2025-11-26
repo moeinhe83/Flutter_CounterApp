@@ -15,6 +15,15 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.lightBlueAccent[200],
         appBar: AppBar(
+          leading: IconButton(
+            tooltip: "Show Records",
+            onPressed: () {},
+            icon: Icon(
+              Icons.receipt_rounded,
+              color: Colors.black,
+              size: 30,
+            ),
+          ),
           actions: [
             Builder(
               builder: (context) {
