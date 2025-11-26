@@ -155,7 +155,10 @@ class _HomePageState extends State<HomePage> {
                       Colors.amber,
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    final date = DateTime.now();
+                    print(date);
+                  },
                   child: Text(
                     "Save",
                     style: TextStyle(
