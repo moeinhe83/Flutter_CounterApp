@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => DateRecord(),
+                      builder: (context) => DateRecord(date: ''),
                     ),
                   );
                 },
@@ -169,23 +169,34 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 SizedBox(width: 50),
-                TextButton(
-                  style: ButtonStyle(
-                    backgroundColor: WidgetStateProperty.all(
-                      Colors.amber,
-                    ),
-                  ),
-                  onPressed: () {
-                    // ignore: unused_local_variable
-                    final date = DateTime.now();
+                Builder(
+                  builder: (context) {
+                    return TextButton(
+                      style: ButtonStyle(
+                        backgroundColor: WidgetStateProperty.all(
+                          Colors.amber,
+                        ),
+                      ),
+                      onPressed: () {
+                        // ignore: unused_local_variable
+                        final date = DateTime.now().toString();
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                DateRecord(date: date),
+                          ),
+                        );
+                      },
+                      child: Text(
+                        "Save",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 30,
+                        ),
+                      ),
+                    );
                   },
-                  child: Text(
-                    "Save",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 30,
-                    ),
-                  ),
                 ),
               ],
             ),
@@ -349,7 +360,8 @@ class Info extends StatelessWidget {
 
 // ==================== /* DateRecord */ ====================
 class DateRecord extends StatelessWidget {
-  const DateRecord({super.key});
+  final String date;
+  const DateRecord({super.key, required this.date});
 
   @override
   Widget build(BuildContext context) {
@@ -357,6 +369,16 @@ class DateRecord extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.backspace,
+              size: 25,
+              color: Colors.black,
+            ),
+          ),
           centerTitle: true,
           backgroundColor: Colors.lightBlue[200],
           title: const Text(
@@ -365,7 +387,22 @@ class DateRecord extends StatelessWidget {
               fontSize: 25,
               color: Colors.black,
               fontWeight: FontWeight.bold,
+              fontStyle: FontStyle.italic,
             ),
+          ),
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.amber,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Text(date),
+              ),
+            ],
           ),
         ),
       ),
