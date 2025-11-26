@@ -15,14 +15,25 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.lightBlueAccent[200],
         appBar: AppBar(
-          leading: IconButton(
-            tooltip: "Show Records",
-            onPressed: () {},
-            icon: Icon(
-              Icons.receipt_rounded,
-              color: Colors.black,
-              size: 30,
-            ),
+          leading: Builder(
+            builder: (context) {
+              return IconButton(
+                tooltip: "Show Records",
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => DateRecord(),
+                    ),
+                  );
+                },
+                icon: Icon(
+                  Icons.receipt_rounded,
+                  color: Colors.black,
+                  size: 30,
+                ),
+              );
+            },
           ),
           actions: [
             Builder(
@@ -165,8 +176,8 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   onPressed: () {
+                    // ignore: unused_local_variable
                     final date = DateTime.now();
-                    print(date);
                   },
                   child: Text(
                     "Save",
@@ -333,5 +344,15 @@ class Info extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+// ==================== /* DateRecord */ ====================
+class DateRecord extends StatelessWidget {
+  const DateRecord({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center();
   }
 }
