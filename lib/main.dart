@@ -396,6 +396,12 @@ class DateRecord extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               SizedBox(height: 20),
+              Icon(
+                Icons.receipt_rounded,
+                size: 100,
+                color: Colors.black,
+              ),
+              SizedBox(height: 20),
               Container(
                 height: 100,
                 width: 300,
