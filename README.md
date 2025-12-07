@@ -29,11 +29,10 @@ Follow these steps to set up and run the project locally:
 1. **Clone the repository**
    ```bash
    git clone https://github.com/moeinhe83/Flutter_CounterApp.git
+   cd Flutter_CounterApp
+   flutter pub get
+   flutter run
 
-
-
-
-# moeinit.com
 
 ![Flutter Logo](assets/image/gitpflutter.png)
 
