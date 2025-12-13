@@ -32,7 +32,7 @@ Follow these steps to set up and run the project locally:
    cd Flutter_CounterApp
    flutter pub get
    flutter run
-```
+
 
 ![Flutter Logo](assets/image/gitpflutter.png)
 
